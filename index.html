@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>YOUR NAME | Web Developer & SEO</title>
+
+<meta name="description" content="Freelance web developer building clean, modern and search-friendly websites for small businesses.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --ink:#432531;
+  --dark:#351c27;
+  --paper:#fffafb;
+  --white:#ffffff;
+  --pink:#e98aa0;
+  --pink-dark:#d96f89;
+  --pink-soft:#fdecef;
+  --pink-light:#fff5f7;
+  --line:#f0d8df;
+  --muted:#806673;
+  --shadow:0 12px 35px rgba(91,45,62,.09);
+  --shadow-hover:0 18px 45px rgba(91,45,62,.14);
+
+  --head:"Bricolage Grotesque", sans-serif;
+  --body:"DM Sans", sans-serif;
+}
+
+/* =========================
+   RESET
+========================= */
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:var(--body);
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.7;
+  font-size:17px;
+}
+
+img{
+  max-width:100%;
+}
+
+a{
+  color:inherit;
+}
+
+:focus-visible{
+  outline:3px solid var(--pink);
+  outline-offset:4px;
+}
+
+.wrap{
+  width:min(1120px, calc(100% - 40px));
+  margin:auto;
+}
+
+h1,h2,h3{
+  font-family:var(--head);
+  line-height:1.15;
+}
+
+h2{
+  font-size:clamp(2rem,4vw,2.7rem);
+  margin-bottom:14px;
+  letter-spacing:-.5px;
+}
+
+section{
+  padding:90px 0;
+}
+
+.lead{
+  color:var(--muted);
+  max-width:62ch;
+  margin-bottom:38px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:50;
+
+  background:rgba(255,250,251,.88);
+  backdrop-filter:blur(16px);
+
+  border-bottom:1px solid rgba(240,216,223,.8);
+
+  box-shadow:0 5px 25px rgba(80,35,50,.04);
+}
+
+nav .wrap{
+  min-height:72px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  gap:30px;
+}
+
+.logo{
+  font-family:var(--head);
+  font-weight:800;
+  text-decoration:none;
+  font-size:1.2rem;
+  letter-spacing:-.3px;
+}
+
+.logo span{
+  color:var(--pink-dark);
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  align-items:center;
+  gap:28px;
+}
+
+nav ul a{
+  text-decoration:none;
+  font-weight:600;
+  font-size:.94rem;
+  color:var(--muted);
+  transition:.2s ease;
+}
+
+nav ul a:hover{
+  color:var(--ink);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  position:relative;
+  overflow:hidden;
+
+  background:
+    radial-gradient(circle at 85% 20%, rgba(255,255,255,.8), transparent 25%),
+    radial-gradient(circle at 10% 80%, rgba(255,255,255,.45), transparent 30%),
+    linear-gradient(145deg,#fff1f4 0%,#f9d3de 100%);
+
+  padding:105px 0 100px;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+
+  width:280px;
+  height:280px;
+
+  border:2px solid rgba(255,255,255,.55);
+  border-radius:50%;
+
+  right:-100px;
+  top:-80px;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+
+  width:180px;
+  height:180px;
+
+  border:2px solid rgba(255,255,255,.45);
+  border-radius:50%;
+
+  left:-80px;
+  bottom:-70px;
+}
+
+.hero .wrap{
+  position:relative;
+  z-index:2;
+
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+
+  gap:70px;
+  align-items:center;
+}
+
+.hero h1{
+  font-size:clamp(2.7rem,6vw,4.5rem);
+  font-weight:800;
+
+  letter-spacing:-2px;
+
+  margin-bottom:22px;
+}
+
+.hero h1 span{
+  color:var(--pink-dark);
+}
+
+.hero p{
+  color:#714d5b;
+  max-width:55ch;
+  margin-bottom:32px;
+  font-size:1.05rem;
+}
+
+.btns{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:13px 25px;
+
+  border-radius:999px;
+
+  font-weight:700;
+  text-decoration:none;
+
+  border:2px solid var(--ink);
+
+  transition:.25s ease;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 25px rgba(75,38,50,.15);
+}
+
+.btn.primary{
+  background:var(--ink);
+  color:white;
+}
+
+.btn.ghost{
+  color:var(--ink);
+  background:rgba(255,255,255,.65);
+  border-color:rgba(67,37,49,.35);
+}
+
+/* =========================
+   HERO PHOTO
+========================= */
+
+.photo{
+  position:relative;
+
+  aspect-ratio:4/5;
+
+  max-width:390px;
+  width:100%;
+
+  margin-left:auto;
+
+  background:var(--white);
+
+  border:8px solid white;
+
+  border-radius:220px 220px 30px 30px;
+
+  box-shadow:
+    0 25px 60px rgba(91,45,62,.18),
+    0 0 0 1px rgba(240,216,223,.8);
+
+  display:grid;
+  place-items:center;
+
+  overflow:hidden;
+
+  color:var(--muted);
+  text-align:center;
+}
+
+.photo::after{
+  content:"";
+
+  position:absolute;
+  inset:8px;
+
+  border:1px solid rgba(255,255,255,.8);
+
+  border-radius:210px 210px 22px 22px;
+
+  pointer-events:none;
+}
+
+.photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.photo span{
+  padding:20px;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:start;
+}
+
+.about p+p{
+  margin-top:18px;
+}
+
+.about > div:first-child{
+  padding-right:20px;
+}
+
+.skills-title{
+  font-family:var(--head);
+  font-weight:700;
+  margin-top:20px;
+  margin-bottom:10px;
+}
+
+.skills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+
+  list-style:none;
+}
+
+.skills li{
+  background:white;
+
+  padding:8px 14px;
+
+  border-radius:999px;
+
+  border:1px solid var(--line);
+
+  box-shadow:0 4px 12px rgba(91,45,62,.04);
+
+  font-size:.9rem;
+  font-weight:600;
+
+  transition:.2s ease;
+}
+
+.skills li:hover{
+  transform:translateY(-2px);
+  border-color:var(--pink);
+  background:var(--pink-light);
+}
+
+/* =========================
+   SECTION HEADING
+========================= */
+
+.section-heading{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:30px;
+
+  margin-bottom:35px;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(310px,1fr));
+
+  gap:28px;
+}
+
+.project{
+  background:white;
+
+  border:2px solid white;
+
+  outline:1px solid var(--line);
+
+  border-radius:22px;
+
+  overflow:hidden;
+
+  display:flex;
+  flex-direction:column;
+
+  box-shadow:var(--shadow);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    border-color .25s ease;
+}
+
+.project:hover{
+  transform:translateY(-7px);
+
+  box-shadow:var(--shadow-hover);
+
+  border-color:white;
+
+  outline-color:#edc3ce;
+}
+
+.shot{
+  position:relative;
+
+  aspect-ratio:16/10;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fde8ee,
+      #fff7f9
+    );
+
+  display:grid;
+  place-items:center;
+
+  overflow:hidden;
+
+  color:var(--muted);
+
+  text-align:center;
+
+  padding:16px;
+}
+
+.shot::after{
+  content:"";
+
+  position:absolute;
+  inset:12px;
+
+  border:2px solid rgba(255,255,255,.85);
+
+  border-radius:13px;
+
+  pointer-events:none;
+}
+
+.shot img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  position:absolute;
+  inset:0;
+}
+
+.shot span{
+  position:relative;
+  z-index:2;
+}
+
+.project .info{
+  padding:25px;
+
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+
+  flex:1;
+}
+
+.project h3{
+  font-size:1.35rem;
+}
+
+.project p{
+  color:var(--muted);
+  font-size:.96rem;
+}
+
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+
+  list-style:none;
+
+  margin-top:2px;
+}
+
+.tags li{
+  font-size:.78rem;
+  font-weight:700;
+
+  background:var(--pink-soft);
+
+  color:#8b4d60;
+
+  padding:5px 10px;
+
+  border-radius:999px;
+
+  border:1px solid #f5d9e1;
+}
+
+.links{
+  margin-top:auto;
+  padding-top:12px;
+
+  display:flex;
+  gap:20px;
+}
+
+.links a{
+  font-weight:700;
+  font-size:.9rem;
+
+  text-decoration:none;
+
+  color:var(--ink);
+
+  border-bottom:2px solid var(--pink);
+
+  padding-bottom:2px;
+
+  transition:.2s ease;
+}
+
+.links a:hover{
+  color:var(--pink-dark);
+}
+
+/* =========================
+   LOVE / PERSONAL SECTION
+========================= */
+
+.love{
+  position:relative;
+
+  background:white;
+
+  border:2px solid white;
+
+  outline:1px solid var(--line);
+
+  border-radius:24px;
+
+  padding:32px 38px;
+
+  margin-bottom:55px;
+
+  font-family:var(--head);
+
+  font-size:clamp(1.25rem,2.6vw,1.6rem);
+
+  line-height:1.45;
+
+  box-shadow:var(--shadow);
+
+  text-align:center;
+}
+
+.love::before{
+  content:"♡";
+
+  display:block;
+
+  color:var(--pink);
+
+  font-size:2rem;
+
+  margin-bottom:8px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.cards{
+  display:grid;
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(230px,1fr));
+
+  gap:20px;
+}
+
+.cards div{
+  position:relative;
+
+  background:white;
+
+  padding:28px;
+
+  border-radius:20px;
+
+  border:2px solid white;
+
+  outline:1px solid var(--line);
+
+  box-shadow:0 10px 28px rgba(91,45,62,.06);
+
+  transition:.25s ease;
+}
+
+.cards div:hover{
+  transform:translateY(-5px);
+
+  box-shadow:var(--shadow-hover);
+
+  outline-color:#edc3ce;
+}
+
+.cards div::before{
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  top:20px;
+  bottom:20px;
+
+  width:4px;
+
+  background:var(--pink);
+
+  border-radius:0 10px 10px 0;
+}
+
+.cards h3{
+  font-size:1.12rem;
+  margin-bottom:9px;
+}
+
+.cards p{
+  color:var(--muted);
+  font-size:.94rem;
+}
+
+/* =========================
+   HELP SECTION
+========================= */
+
+.help{
+  background:
+    linear-gradient(
+      180deg,
+      #fff5f7 0%,
+      #fdecef 100%
+    );
+
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+  text-align:center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #fff0f4,
+      var(--paper) 65%
+    );
+}
+
+.contact .lead{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.contact .btns{
+  justify-content:center;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  padding:35px 0;
+
+  text-align:center;
+
+  color:var(--muted);
+
+  font-size:.88rem;
+
+  border-top:1px solid var(--line);
+
+  background:white;
+}
+
+/* =========================
+   LITTLE DECORATIVE LINE
+========================= */
+
+.section-label{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+
+  font-size:.78rem;
+  font-weight:800;
+
+  text-transform:uppercase;
+
+  letter-spacing:1.5px;
+
+  color:var(--pink-dark);
+
+  margin-bottom:12px;
+}
+
+.section-label::before{
+  content:"";
+
+  width:25px;
+  height:2px;
+
+  background:var(--pink);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:800px){
+
+  nav .wrap{
+    min-height:64px;
+  }
+
+  nav ul{
+    gap:13px;
+  }
+
+  nav ul a{
+    font-size:.8rem;
+  }
+
+  .hero{
+    padding:75px 0 70px;
+  }
+
+  .hero .wrap,
+  .about{
+    grid-template-columns:1fr;
+    gap:45px;
+  }
+
+  .hero h1{
+    font-size:clamp(2.5rem,11vw,3.7rem);
+  }
+
+  .photo{
+    order:-1;
+    margin:0 auto;
+    max-width:280px;
+  }
+
+  .about > div:first-child{
+    padding-right:0;
+  }
+
+  section{
+    padding:70px 0;
+  }
+
+  .section-heading{
+    display:block;
+  }
+
+  .section-heading .lead{
+    margin-bottom:0;
+  }
+
+}
+
+@media(max-width:560px){
+
+  .wrap{
+    width:min(100% - 28px,1120px);
+  }
+
+  nav .wrap{
+    flex-direction:column;
+    padding:14px 0;
+    gap:10px;
+  }
+
+  nav ul{
+    gap:11px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  nav ul a{
+    font-size:.76rem;
+  }
+
+  .hero{
+    padding:60px 0;
+  }
+
+  .hero h1{
+    letter-spacing:-1px;
+  }
+
+  .btns{
+    flex-direction:column;
+  }
+
+  .btn{
+    width:100%;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .love{
+    padding:28px 22px;
+  }
+
+}
+
+@media(prefers-reduced-motion:reduce){
+
+  *,
+  *::before,
+  *::after{
+    transition:none!important;
+    scroll-behavior:auto!important;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+  <div class="wrap">
+
+    <a class="logo" href="#top">
+      YOUR <span>NAME</span>
+    </a>
+
+    <ul>
+
+      <li>
+        <a href="#about">About</a>
+      </li>
+
+      <li>
+        <a href="#work">Work</a>
+      </li>
+
+      <li>
+        <a href="#team">Team</a>
+      </li>
+
+      <li>
+        <a href="#help">Services</a>
+      </li>
+
+      <li>
+        <a href="#contact">Contact</a>
+      </li>
+
+    </ul>
+
+  </div>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero" id="top">
+
+  <div class="wrap">
+
+    <div>
+
+      <div class="section-label">
+        Web Developer & SEO
+      </div>
+
+      <h1>
+        I build clean websites that
+        <span>bring customers in.</span>
+      </h1>
+
+      <p>
+        Hi, I'm YOUR NAME, a web developer who creates
+        simple, fast and welcoming websites for small
+        businesses, and makes sure people can find them
+        on Google.
+      </p>
+
+      <div class="btns">
+
+        <a class="btn primary" href="#work">
+          See my work →
+        </a>
+
+        <a class="btn ghost" href="#contact">
+          Get in touch
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="photo">
+
+      <span>
+        Your photo here<br>
+        <small>images/me.jpg</small>
+      </span>
+
+      <img
+        src="images/me.jpg"
+        alt="Portrait of YOUR NAME"
+        onerror="this.remove()"
+      >
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+  <div class="wrap about">
+
+    <div>
+
+      <div class="section-label">
+        A little about me
+      </div>
+
+      <h2>
+        Building websites I actually enjoy using.
+      </h2>
+
+      <p>
+        I'm a self-taught web developer. I learned
+        HTML, CSS and JavaScript on my own, and I host
+        my client sites on GitHub, which keeps hosting
+        simple and low cost.
+      </p>
+
+      <p>
+        I'm early in my career, and I treat every project
+        as a chance to get better. I listen first, build
+        what you actually need, and keep checking that
+        the site feels comfortable and easy for your
+        customers to use.
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <div class="section-label">
+        My toolkit
+      </div>
+
+      <h2>
+        What I work with
+      </h2>
+
+
+      <p class="skills-title">
+        Building
+      </p>
+
+      <ul class="skills">
+
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Responsive design</li>
+        <li>Forms & galleries</li>
+        <li>Listing & catalog pages</li>
+
+      </ul>
+
+
+      <p class="skills-title">
+        Getting found
+      </p>
+
+      <ul class="skills">
+
+        <li>SEO</li>
+        <li>Meta tags</li>
+        <li>Page titles</li>
+        <li>Image optimization</li>
+        <li>Page speed</li>
+        <li>Google Search Console</li>
+
+      </ul>
+
+
+      <p class="skills-title">
+        Tools & habits
+      </p>
+
+      <ul class="skills">
+
+        <li>Git</li>
+        <li>GitHub</li>
+        <li>GitHub Pages</li>
+        <li>Accessibility basics</li>
+        <li>Debugging</li>
+        <li>Self-learning</li>
+        <li>Client communication</li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     WORK
+========================= -->
+
+<section id="work">
+
+  <div class="wrap">
+
+    <div class="section-heading">
+
+      <div>
+
+        <div class="section-label">
+          My portfolio
+        </div>
+
+        <h2>
+          Selected work
+        </h2>
+
+      </div>
+
+      <p class="lead">
+        A few of the sites I've built. Click a project
+        to see each one live.
+      </p>
+
+    </div>
+
+
+    <div class="grid">
+
+
+      <!-- PROJECT 1 -->
+
+      <article class="project">
+
+        <div class="shot">
+
+          <span>
+            Screenshot of the property listing site<br>
+            <small>images/property-listing.jpg</small>
+          </span>
+
+          <img
+            src="images/property-listing.jpg"
+            alt="Property listing website showing homes with photos and prices"
+            onerror="this.remove()"
+          >
+
+        </div>
+
+
+        <div class="info">
+
+          <h3>
+            Property Listing Website
+          </h3>
+
+          <p>
+            Built with a friend for a real estate client.
+            Visitors browse each home with photos, details
+            and the price, so they can compare places before
+            booking a visit.
+          </p>
+
+          <ul class="tags">
+
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+
+          </ul>
+
+          <div class="links">
+
+            <a
+              href="https://YOUR-USERNAME.github.io/property-listing/"
+              target="_blank"
+              rel="noopener"
+            >
+              View live site
+            </a>
+
+            <a
+              href="https://github.com/YOUR-USERNAME/property-listing"
+              target="_blank"
+              rel="noopener"
+            >
+              Code
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- PROJECT 2 -->
+
+      <article class="project">
+
+        <div class="shot">
+
+          <span>
+            Screenshot of your next project<br>
+            <small>images/project-2.jpg</small>
+          </span>
+
+          <img
+            src="images/project-2.jpg"
+            alt="Project 2 website screenshot"
+            onerror="this.remove()"
+          >
+
+        </div>
+
+
+        <div class="info">
+
+          <h3>
+            Project Name
+          </h3>
+
+          <p>
+            One or two sentences explaining who it was
+            for, what problem it solved and what you did.
+          </p>
+
+          <ul class="tags">
+
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>SEO</li>
+
+          </ul>
+
+          <div class="links">
+
+            <a href="#" target="_blank">
+              View live site
+            </a>
+
+            <a href="#" target="_blank">
+              Code
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- PROJECT 3 -->
+
+      <article class="project">
+
+        <div class="shot">
+
+          <span>
+            Screenshot of your next project<br>
+            <small>images/project-3.jpg</small>
+          </span>
+
+          <img
+            src="images/project-3.jpg"
+            alt="Project 3 website screenshot"
+            onerror="this.remove()"
+          >
+
+        </div>
+
+
+        <div class="info">
+
+          <h3>
+            Project Name
+          </h3>
+
+          <p>
+            One or two sentences explaining who it was
+            for, what problem it solved and what you did.
+          </p>
+
+          <ul class="tags">
+
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+
+          </ul>
+
+          <div class="links">
+
+            <a href="#" target="_blank">
+              View live site
+            </a>
+
+            <a href="#" target="_blank">
+              Code
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     TEAM
+========================= -->
+
+<section id="team">
+
+  <div class="wrap">
+
+    <div class="love">
+
+      I love this work. Turning an idea into a page
+      people enjoy using is the best part of my day,
+      and I never stop learning.
+
+    </div>
+
+
+    <div class="section-label">
+      Why work with me
+    </div>
+
+    <h2>
+      What I bring to a team
+    </h2>
+
+    <p class="lead">
+      I'm early in my career, and I'm a fast, curious
+      learner who cares about the details.
+    </p>
+
+
+    <div class="cards">
+
+
+      <div>
+
+        <h3>
+          I learn fast
+        </h3>
+
+        <p>
+          I taught myself HTML, CSS, JavaScript and SEO,
+          and I'm happy to pick up new tools and ask
+          good questions.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          I care about the user
+        </h3>
+
+        <p>
+          I think about how a visitor feels on the page,
+          from clear photos and prices to easy navigation.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          I'm reliable and organized
+        </h3>
+
+        <p>
+          I keep my code tidy, my projects on GitHub,
+          and my clients updated along the way.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          I'm easy to work with
+        </h3>
+
+        <p>
+          I take feedback well, share ideas, and help
+          teammates reach the finish line together.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section class="help" id="help">
+
+  <div class="wrap">
+
+    <div class="section-label">
+      What I can do
+    </div>
+
+    <h2>
+      How I can help your business
+    </h2>
+
+    <p class="lead">
+      You get a website that looks good, loads quickly
+      and is easy for your customers to use.
+    </p>
+
+
+    <div class="cards">
+
+
+      <div>
+
+        <h3>
+          A site built for your customers
+        </h3>
+
+        <p>
+          Clear layouts, readable text and easy navigation,
+          so visitors find what they need without effort.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Found on Google
+        </h3>
+
+        <p>
+          Page titles, descriptions, image text and clean
+          code set up so search engines understand your pages.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Works on every screen
+        </h3>
+
+        <p>
+          Your site looks right on phones, tablets
+          and computers.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Photos, details and prices
+        </h3>
+
+        <p>
+          Listings, menus or product pages that show
+          what you offer in an organized way.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="contact" id="contact">
+
+  <div class="wrap">
+
+    <div class="section-label">
+      Let's work together
+    </div>
+
+    <h2>
+      Let's build your website
+    </h2>
+
+    <p class="lead">
+      Tell me about your business and what you'd like
+      your site to do. I'll reply within a day or two.
+    </p>
+
+    <div class="btns">
+
+      <a
+        class="btn primary"
+        href="mailto:youremail@example.com"
+      >
+        Email me
+      </a>
+
+      <a
+        class="btn ghost"
+        href="https://github.com/YOUR-USERNAME"
+        target="_blank"
+        rel="noopener"
+      >
+        See my GitHub
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  © <span id="year"></span>
+  YOUR NAME.
+  Built with HTML, CSS and JavaScript.
+
+</footer>
+
+
+<script>
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
