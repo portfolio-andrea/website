@@ -410,6 +410,8 @@ nav ul a:hover{
 
   border:2px solid white;
 
+  outline:1px solid var(--line);
+
   border-radius:22px;
 
   overflow:hidden;
@@ -460,17 +462,8 @@ nav ul a:hover{
 }
 
 .shot::after{
-  content:"";
-
-  position:absolute;
-  inset:12px;
-
-  border:2px solid rgba(255,255,255,.85);
-
-  border-radius:13px;
-
-  pointer-events:none;
-}
+      content:none;
+    }
 
 .shot img{
   width:100%;
