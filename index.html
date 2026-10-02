@@ -1,13 +1,10 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Andrea | Web Developer & SEO</title>
+<title>Andrea| Web Developer & SEO</title>
 
 <meta name="description" content="Freelance web developer building clean, modern and search-friendly websites for small businesses.">
 
@@ -16,40 +13,25 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-
 <style>
 
-/* =========================
-   ROOT
-========================= */
-
 :root{
-
   --ink:#432531;
   --dark:#351c27;
-
   --paper:#fffafb;
   --white:#ffffff;
-
   --pink:#e98aa0;
   --pink-dark:#d96f89;
-
   --pink-soft:#fdecef;
   --pink-light:#fff5f7;
-
   --line:#f0d8df;
-
   --muted:#806673;
-
   --shadow:0 12px 35px rgba(91,45,62,.09);
-
   --shadow-hover:0 18px 45px rgba(91,45,62,.14);
 
   --head:"Bricolage Grotesque", sans-serif;
   --body:"DM Sans", sans-serif;
-
 }
-
 
 /* =========================
    RESET
@@ -112,7 +94,6 @@ section{
   margin-bottom:38px;
 }
 
-
 /* =========================
    NAVIGATION
 ========================= */
@@ -170,7 +151,6 @@ nav ul a{
 nav ul a:hover{
   color:var(--ink);
 }
-
 
 /* =========================
    HERO
@@ -247,11 +227,6 @@ nav ul a:hover{
   font-size:1.05rem;
 }
 
-
-/* =========================
-   BUTTONS
-========================= */
-
 .btns{
   display:flex;
   gap:14px;
@@ -290,7 +265,6 @@ nav ul a:hover{
   background:rgba(255,255,255,.65);
   border-color:rgba(67,37,49,.35);
 }
-
 
 /* =========================
    HERO PHOTO
@@ -348,7 +322,6 @@ nav ul a:hover{
   padding:20px;
 }
 
-
 /* =========================
    ABOUT
 ========================= */
@@ -368,37 +341,29 @@ nav ul a:hover{
   padding-right:20px;
 }
 
-
 /* =========================
-   ABOUT IMAGE
+   ABOUT PAPER PHOTO
 ========================= */
 
 .about-photo{
-  margin-top:32px;
+  margin-top:28px;
 
-  width:100%;
+  width:180px;
+  height:270px;
 
-  aspect-ratio:16/10;
+  background:#fff;
 
-  background:
-    linear-gradient(
-      135deg,
-      #fde8ee,
-      #fff7f9
-    );
+  padding:8px;
 
-  border-radius:22px;
+  border:1px solid #eadde1;
 
-  border:2px solid white;
+  box-shadow:
+    0 7px 15px rgba(91,45,62,.10),
+    0 2px 4px rgba(91,45,62,.05);
 
-  outline:1px solid var(--line);
-
-  box-shadow:var(--shadow);
+  transform:rotate(-1.2deg);
 
   overflow:hidden;
-
-  display:grid;
-  place-items:center;
 
   position:relative;
 }
@@ -417,24 +382,16 @@ nav ul a:hover{
 
   position:absolute;
 
-  inset:0;
+  inset:8px;
 
-  border:1px solid rgba(255,255,255,.7);
-
-  border-radius:20px;
+  border:1px solid rgba(255,255,255,.8);
 
   pointer-events:none;
 }
 
-
-/* =========================
-   SKILLS
-========================= */
-
 .skills-title{
   font-family:var(--head);
   font-weight:700;
-
   margin-top:20px;
   margin-bottom:10px;
 }
@@ -466,12 +423,9 @@ nav ul a:hover{
 
 .skills li:hover{
   transform:translateY(-2px);
-
   border-color:var(--pink);
-
   background:var(--pink-light);
 }
-
 
 /* =========================
    SECTION HEADING
@@ -479,16 +433,12 @@ nav ul a:hover{
 
 .section-heading{
   display:flex;
-
   justify-content:space-between;
-
   align-items:end;
-
   gap:30px;
 
   margin-bottom:35px;
 }
-
 
 /* =========================
    PROJECTS
@@ -583,7 +533,6 @@ nav ul a:hover{
 
   display:flex;
   flex-direction:column;
-
   gap:12px;
 
   flex:1;
@@ -625,17 +574,14 @@ nav ul a:hover{
 
 .links{
   margin-top:auto;
-
   padding-top:12px;
 
   display:flex;
-
   gap:20px;
 }
 
 .links a{
   font-weight:700;
-
   font-size:.9rem;
 
   text-decoration:none;
@@ -652,7 +598,6 @@ nav ul a:hover{
 .links a:hover{
   color:var(--pink-dark);
 }
-
 
 /* =========================
    LOVE / PERSONAL SECTION
@@ -695,7 +640,6 @@ nav ul a:hover{
 
   margin-bottom:8px;
 }
-
 
 /* =========================
    CARDS
@@ -754,16 +698,13 @@ nav ul a:hover{
 
 .cards h3{
   font-size:1.12rem;
-
   margin-bottom:9px;
 }
 
 .cards p{
   color:var(--muted);
-
   font-size:.94rem;
 }
-
 
 /* =========================
    HELP SECTION
@@ -778,10 +719,8 @@ nav ul a:hover{
     );
 
   border-top:1px solid var(--line);
-
   border-bottom:1px solid var(--line);
 }
-
 
 /* =========================
    CONTACT
@@ -807,7 +746,6 @@ nav ul a:hover{
   justify-content:center;
 }
 
-
 /* =========================
    FOOTER
 ========================= */
@@ -826,20 +764,16 @@ footer{
   background:white;
 }
 
-
 /* =========================
-   SECTION LABEL
+   LITTLE DECORATIVE LINE
 ========================= */
 
 .section-label{
   display:inline-flex;
-
   align-items:center;
-
   gap:10px;
 
   font-size:.78rem;
-
   font-weight:800;
 
   text-transform:uppercase;
@@ -855,12 +789,10 @@ footer{
   content:"";
 
   width:25px;
-
   height:2px;
 
   background:var(--pink);
 }
-
 
 /* =========================
    MOBILE
@@ -896,9 +828,7 @@ footer{
 
   .photo{
     order:-1;
-
     margin:0 auto;
-
     max-width:280px;
   }
 
@@ -919,15 +849,11 @@ footer{
   }
 
   .about-photo{
-    aspect-ratio:16/9;
+    width:180px;
+    height:270px;
   }
 
 }
-
-
-/* =========================
-   SMALL MOBILE
-========================= */
 
 @media(max-width:560px){
 
@@ -937,17 +863,13 @@ footer{
 
   nav .wrap{
     flex-direction:column;
-
     padding:14px 0;
-
     gap:10px;
   }
 
   nav ul{
     gap:11px;
-
     flex-wrap:wrap;
-
     justify-content:center;
   }
 
@@ -980,16 +902,11 @@ footer{
   }
 
   .about-photo{
-    aspect-ratio:4/3;
-    border-radius:18px;
+    width:165px;
+    height:245px;
   }
 
 }
-
-
-/* =========================
-   REDUCED MOTION
-========================= */
 
 @media(prefers-reduced-motion:reduce){
 
@@ -997,19 +914,16 @@ footer{
   *::before,
   *::after{
     transition:none!important;
-
     scroll-behavior:auto!important;
   }
 
 }
 
 </style>
-
 </head>
 
 
 <body>
-
 
 <!-- =========================
      NAVIGATION
@@ -1097,7 +1011,7 @@ footer{
 
       <img
         src="photo.png"
-        alt="Portrait of Andrea"
+        alt="Portrait of YOUR NAME"
         onerror="this.remove()"
       >
 
@@ -1115,9 +1029,6 @@ footer{
 <section id="about">
 
   <div class="wrap about">
-
-
-    <!-- ABOUT ME -->
 
     <div>
 
@@ -1149,13 +1060,12 @@ footer{
         customers to use.
       </p>
 
-
-      <!-- NEW ABOUT IMAGE -->
+      <!-- SMALL PAPER-STYLE PHOTO -->
 
       <div class="about-photo">
 
         <img
-          src="ctee.png"
+          src="images/about-me.jpg"
           alt="Andrea working on a web development project"
           onerror="this.remove()"
         >
@@ -1164,8 +1074,6 @@ footer{
 
     </div>
 
-
-    <!-- MY TOOLKIT -->
 
     <div>
 
@@ -1307,7 +1215,6 @@ footer{
 
           </ul>
 
-
           <div class="links">
 
             <a
@@ -1345,7 +1252,7 @@ footer{
 
           <img
             src="LOGO GOURMET (1).png"
-            alt="Metro Gourmet Catering website screenshot"
+            alt="Project 2 website screenshot"
             onerror="this.remove()"
           >
 
@@ -1371,8 +1278,7 @@ footer{
 
           </ul>
 
-
-          <div class="links">
+           <div class="links">
 
             <a
               href="https://metrogourmetcatering-nyc.github.io/Web//"
@@ -1409,7 +1315,7 @@ footer{
 
           <img
             src="kaida.avif"
-            alt="Kaidas Coffee website screenshot"
+            alt="Project 3 website screenshot"
             onerror="this.remove()"
           >
 
@@ -1435,8 +1341,7 @@ footer{
 
           </ul>
 
-
-          <div class="links">
+           <div class="links">
 
             <a
               href="https://sweets-nyc.github.io/Kaida-coffee-Bakery/#home/"
@@ -1459,7 +1364,6 @@ footer{
         </div>
 
       </article>
-
 
     </div>
 
@@ -1675,7 +1579,6 @@ footer{
       your site to do. I'll reply within a day or two.
     </p>
 
-
     <div class="btns">
 
       <a
@@ -1721,8 +1624,5 @@ document.getElementById("year").textContent =
 
 </script>
 
-
 </body>
-
 </html>
-```
